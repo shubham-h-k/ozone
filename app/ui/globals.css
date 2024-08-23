@@ -2,7 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer utilities {
+  .max-width {
+    @apply max-w-[75rem];
+  }
+
+  .padding-x {
+    @apply px-5;
+  }
+
+  .margin-top-sm {
+    @apply mt-10 xl:mt-8;
+  }
+
+  .margin-top-md {
+    @apply mt-12 xl:mt-20;
+  }
+
+  .img-gradient {
+    /* applied on images in <ExploreSection />  */
+    @apply absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-b from-[#f6f6fd00] to-[#303030ff];
+  }
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +53,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
