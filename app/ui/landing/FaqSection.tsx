@@ -48,7 +48,7 @@ const faqs = [
 export default function FaqSection() {
   const [seletedId, setSelectedId] = useState(null);
 
-  function handleSelection(id) {
+  function handleSelection(id: any) {
     setSelectedId(id === seletedId ? null : id);
   }
 
