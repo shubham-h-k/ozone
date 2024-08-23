@@ -24,11 +24,9 @@ export default function Search({ placeholder }: { placeholder: string }) {
     replace(`${pathname}?${params.toString()}`);
   }, 600);
 
-  const handleClearSearch = function (e: Event) {
+  const handleClearSearch = function (e: any) {
     e.preventDefault();
-    if (e.target === null) {
-      throw new Error("target can not be null");
-    }
+
     const params = new URLSearchParams(searchParams);
     params.delete("query");
     replace(`${pathname}?${params.toString()}`);
