@@ -1,9 +1,11 @@
+import { Suspense } from "react";
+import { IoMenu } from "react-icons/io5";
+
 import Logo from "@/app/ui/Logo";
 import Search from "@/app/ui/Search";
 import HeaderNav from "@/app/ui/HeaderNav";
 import CartButton from "@/app/ui/cart/CartButton";
 import AccountButton from "@/app/ui/account/AccountButton";
-import { IoMenu } from "react-icons/io5";
 
 export default function Header() {
   return (
@@ -15,7 +17,9 @@ export default function Header() {
         <AccountButton />
       </div>
 
-      <Search placeholder="Search products..." />
+      <Suspense>
+        <Search placeholder="Search products..." />
+      </Suspense>
 
       <HeaderNav />
 
