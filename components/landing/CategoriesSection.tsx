@@ -1,5 +1,5 @@
-import Heading from "@/app/ui/Heading";
-import CategoriesList from "@/app/ui/landing/CategoriesList";
+import Heading from "@/components/Heading";
+import CategoriesList from "@/components/landing/CategoriesList";
 import Image from "next/image";
 
 function CategoriesSection() {

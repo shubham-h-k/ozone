@@ -1,11 +1,14 @@
-import { Suspense } from "react";
-import { IoMenu } from "react-icons/io5";
+"use client";
 
-import Logo from "@/app/ui/Logo";
-import Search from "@/app/ui/Search";
-import HeaderNav from "@/app/ui/HeaderNav";
-import CartButton from "@/app/ui/cart/CartButton";
-import AccountButton from "@/app/ui/account/AccountButton";
+import { Suspense } from "react";
+
+import Logo from "@/components/Logo";
+import Search from "@/components/Search";
+import HeaderNav from "@/components/HeaderNav";
+import CartButton from "@/components/cart/CartButton";
+import AccountButton from "@/components/account/AccountButton";
+
+import ButtonOpenMobileNav from "@/components/ButtonOpenMobileNav";
 
 export default function Header() {
   return (
@@ -23,9 +26,7 @@ export default function Header() {
 
       <HeaderNav />
 
-      <button className="justify-self-end md:hidden">
-        <IoMenu className="h-10 w-10 text-primary" />
-      </button>
+      <ButtonOpenMobileNav />
     </header>
   );
 }

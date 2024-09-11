@@ -3,7 +3,7 @@ import { BiSupport } from "react-icons/bi";
 import { RiRefund2Line } from "react-icons/ri";
 import { MdDiscount } from "react-icons/md";
 
-import Heading from "@/app/ui/Heading";
+import Heading from "@/components/Heading";
 
 function ProcessSection() {
   return (

@@ -46,14 +46,17 @@ const faqs = [
 ];
 
 export default function FaqSection() {
-  const [seletedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
-  function handleSelection(id: any) {
-    setSelectedId(id === seletedId ? null : id);
+  function handleSelection(id: string) {
+    setSelectedId(id === selectedId ? null : id);
   }
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-[auto_1fr] items-start gap-8 max-width mx-auto margin-top-md padding-x">
+    <section
+      id="faqssection"
+      className="grid grid-cols-1 md:grid-cols-[auto_1fr] items-start gap-8 max-width mx-auto margin-top-md padding-x"
+    >
       <ul className="flex flex-col gap-5 md:pt-12">
         {faqs.map((el) => (
           <Accordian
@@ -61,7 +64,7 @@ export default function FaqSection() {
             id={el.id}
             question={el.question}
             answer={el.answer}
-            seletedId={seletedId}
+            selectedId={selectedId}
             onSelection={handleSelection}
           />
         ))}
@@ -89,8 +92,22 @@ export default function FaqSection() {
   );
 }
 
-function Accordian({ id, question, answer, seletedId, onSelection }) {
-  const selected = id === seletedId;
+interface PropsAccordian {
+  id: string;
+  question: string;
+  answer: string;
+  selectedId: string | null;
+  onSelection: (id: string) => void;
+}
+
+function Accordian({
+  id,
+  question,
+  answer,
+  selectedId,
+  onSelection,
+}: PropsAccordian) {
+  const selected = id === selectedId;
 
   return (
     <li className="grid grid-cols-[1fr_auto] gap-3">
@@ -98,7 +115,17 @@ function Accordian({ id, question, answer, seletedId, onSelection }) {
         {question}
       </h3>
       <button className="self-start" onClick={() => onSelection(id)}>
-        {selected ? <GrSubtract /> : <GrAdd />}
+        {selected ? (
+          <>
+            <span className="sr-only">Collapse content</span> <GrSubtract />
+          </>
+        ) : (
+          <>
+            {" "}
+            <span className="sr-only">Expand content</span>
+            <GrAdd />
+          </>
+        )}
       </button>
 
       <p
@@ -111,11 +138,3 @@ function Accordian({ id, question, answer, seletedId, onSelection }) {
     </li>
   );
 }
-
-// Accordian.propTypes = {
-//   id: PropTypes.string,
-//   question: PropTypes.string,
-//   answer: PropTypes.string,
-//   seletedId: PropTypes.string,
-//   onSelection: PropTypes.func,
-// };

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { IoCheckmarkCircle } from "react-icons/io5";
 
-import Heading from "@/app/ui/Heading";
+import Heading from "@/components/Heading";
 import infoSection1 from "@/public/images/info-section-1.png";
 import infoSection2 from "@/public/images/info-section-2.png";
 

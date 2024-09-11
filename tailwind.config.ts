@@ -46,11 +46,13 @@ export default config;
 // #a5a6f61a Faq,
 // #cfcaca Faq,
 // #060127 Consultation, ContactForm
+// #1c1b1f /shop
 
-// #4D4D4D - InfoSection / WhyWorkWithUsSection / Process / Faq / Product
+// #4D4D4D - InfoSection | WhyWorkWithUsSection | Process | Faq | Product | /shop
 // #676767 - Product
+// #909090 - /shop
 // #a1a1a1 - FooterSection
-// #D9D9D9 - OurClients
+// #D9D9D9 - OurClients | /shop
 // #e4e4e7 - ContactForm
 // #EAEAEA - Product
 // #efefef - Faq

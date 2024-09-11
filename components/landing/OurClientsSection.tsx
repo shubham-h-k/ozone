@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Heading from "@/app/ui/Heading";
+import Heading from "@/components/Heading";
 import facebookLogo from "@/public/images/facebook-logo.png";
 import pbsLogo from "@/public/images/pbs-logo.png";
 import paypalLogo from "@/public/images/paypal-logo.png";

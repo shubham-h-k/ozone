@@ -1,4 +1,4 @@
-import Heading from "@/app/ui/Heading";
+import Heading from "@/components/Heading";
 import { FaLaptop } from "react-icons/fa6";
 import { FaHandshake } from "react-icons/fa6";
 import { BiSupport } from "react-icons/bi";

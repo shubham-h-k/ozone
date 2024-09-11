@@ -20,7 +20,7 @@
   }
 
   .img-gradient {
-    /* applied on images in <ExploreSection />  */
+    /* applied on images in '@/components/landing/ExploreSection'  */
     @apply absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-b from-[#f6f6fd00] to-[#303030ff];
   }
 }
