@@ -1,6 +1,5 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
-import { IoGrid } from "react-icons/io5";
-import { IoList } from "react-icons/io5";
 
 import Header from "@/components/Header";
 import DualRangeSlider from "@/components/DualRangeSlider";
@@ -53,15 +52,21 @@ export default async function Shop() {
             <HorizontalRule />
 
             <div className="flex flex-col gap-6 mt-10">
-              <SortMobile />
+              <Suspense>
+                <SortMobile />
+              </Suspense>
 
-              <FilterCheckbox
-                field="category"
-                label="Categories"
-                data={categories}
-              />
+              <Suspense>
+                <FilterCheckbox
+                  field="category"
+                  label="Categories"
+                  data={categories}
+                />
+              </Suspense>
 
-              <FilterCheckbox field="brand" label="Brands" data={brands} />
+              <Suspense>
+                <FilterCheckbox field="brand" label="Brands" data={brands} />
+              </Suspense>
 
               <div className="p-6 border border-[#d9d9d9] rounded">
                 <label htmlFor="price" className="block mb-4 font-semibold">
@@ -70,7 +75,9 @@ export default async function Shop() {
                 <DualRangeSlider />
               </div>
 
-              <ColorSelector />
+              <Suspense>
+                <ColorSelector />
+              </Suspense>
             </div>
           </aside>
 
@@ -81,7 +88,9 @@ export default async function Shop() {
                 Showing 12 results of 24
               </p>
               <div className="hidden lg:block">
-                <Sort />
+                <Suspense>
+                  <Sort />
+                </Suspense>
               </div>
               {/* <div className="flex items-center gap-10">
                 <Sort />
