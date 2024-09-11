@@ -84,27 +84,14 @@ export default async function Shop() {
           <main>
             <div className="flex items-center justify-between py-2">
               <button>Filters</button>
-              <p className="text-sm font-semibold text-[#909090]">
+              {/* <p className="text-sm font-semibold text-[#909090]">
                 Showing 12 results of 24
-              </p>
-              <div className="hidden lg:block">
+              </p> */}
+              <div className="">
                 <Suspense>
                   <Sort />
                 </Suspense>
               </div>
-              {/* <div className="flex items-center gap-10">
-                <Sort />
-
-                <button>
-                  <span className="sr-only">Grid view</span>
-                  <IoGrid className="w-6 h-6 text-primary" />
-                </button>
-
-                <button>
-                  <span className="sr-only">List view</span>
-                  <IoList className="w-6 h-6 text-[#1c1b1f]" />
-                </button>
-              </div> */}
             </div>
             <HorizontalRule />
             <ul className="mt-6 sm:mt-10 space-y-6 sm:space-y-10">

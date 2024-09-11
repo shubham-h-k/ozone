@@ -30,7 +30,6 @@ export default async function Product({ product }: Props) {
   const { thumbnail, title, price, discount } = product;
 
   return (
-    // <div className="w-[17.75rem] space-y-4">
     <div className="flex border border-[#e4e4e7] rounded-md overflow-hidden">
       <div className="flex flex-col gap-4 p-2 sm:p4 bg-[#f4f4f4]">
         <div className="flex items-center justify-between">
@@ -44,7 +43,7 @@ export default async function Product({ product }: Props) {
 
         <Link
           href="/shop"
-          className="relative block self-center w-20 h-20 sm:w-32 sm:h-32 md:w-[13.75rem] md:h-[13.75rem] "
+          className="relative block self-center w-20 h-20 sm:w-40 sm:h-40 md:w-[13.75rem] md:h-[13.75rem] "
         >
           <Image
             src={thumbnail}
@@ -56,11 +55,15 @@ export default async function Product({ product }: Props) {
       </div>
 
       <div className="flex flex-col flex-1 py-2 px-4 sm:py-4 sm:px-6">
-        <p className="text-xs sm:text-sm xl:text-lg font-semibold cursor-pointer">
-          {truncateTitle(title, 70)}
+        <p className="sm:hidden text-sm xl:text-lg font-semibold cursor-pointer">
+          {truncateTitle(title, 60)}
         </p>
 
-        <p className="hidden text-xs sm:text-sm xl:text-lg font-semibold cursor-pointer">
+        <p className="hidden sm:block md:hidden xl:text-lg font-semibold cursor-pointer">
+          {truncateTitle(title, 120)}
+        </p>
+
+        <p className="hidden md:block text-lg font-semibold cursor-pointer">
           {truncateTitle(title, 190)}
         </p>
 
