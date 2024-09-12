@@ -18,11 +18,11 @@ export default function Product({ product }: { product: productProps }) {
   const { thumbnail, title, price, discount } = product;
 
   return (
-    <div className="flex border border-[#e4e4e7] rounded-md overflow-hidden">
+    <li className="flex border border-[#e4e4e7] rounded-md overflow-hidden">
       <div className="flex flex-col gap-4 p-2 sm:p4 bg-[#f4f4f4]">
         <div className="flex items-center justify-between">
           <span
-            className={`${archivo.className} px-2 py-1 text-[0.5rem] sm:text-[0.625rem] font-bold text-white bg-[#FF0000] rounded-full`}
+            className={`${archivo.className} px-2 py-1 text-[0.5rem] sm:text-[0.625rem] font-bold text-white bg-[#EE0000] rounded-full`}
           >
             Sale
           </span>
@@ -72,18 +72,20 @@ export default function Product({ product }: { product: productProps }) {
         <div className="flex flex-wrap items-center justify-between gap-1 sm:gap-2 mt-auto">
           <div className="flex items-center gap-1 sm:gap-2">
             <ButtonUpdateCount>
+              <span className="sr-only">Decrease count by one</span>
               <FaMinus className="w-3 h-3 fill-[#676767]" />
             </ButtonUpdateCount>
             <span className="flex items-center justify-center w-10 sm:w-12 md:w-16 h-6 sm:h-8 md:h-10 text-sm sm:text-base font-bold border border-[#EAEAEA] rounded-md sm:rounded-lg">
               {itemCount}
             </span>
             <ButtonUpdateCount>
+              <span className="sr-only">Increase count by one</span>
               <FaPlus className="w-3 h-3 fill-[#4D4D4D]" />
             </ButtonUpdateCount>
           </div>
           <ButtonAddToCart />
         </div>
       </div>
-    </div>
+    </li>
   );
 }

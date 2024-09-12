@@ -19,7 +19,7 @@ const config: Config = {
         black: "#000000",
         white: "#FFFFFF",
         "white-hover": "#f3f3f3",
-        red: "#FF0505", // #FF0000 <Product />
+        red: "#FF0505", // #EE0000 shop/Product.tsx
       },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],

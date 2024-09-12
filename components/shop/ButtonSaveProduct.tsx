@@ -8,8 +8,9 @@ export default function ButtonSaveProduct() {
   const [isSaved, setIsSaved] = useState(false);
   return (
     <button onClick={() => setIsSaved((is) => !is)} className="cursor-pointer">
+      <span className="sr-only">Save product</span>
       {isSaved ? (
-        <FaHeart className="w-4 h-4 sm:w-5 sm:h-5 fill-[#FF0000]" />
+        <FaHeart className="w-4 h-4 sm:w-5 sm:h-5 fill-[#EE0000]" />
       ) : (
         <FaRegHeart className="w-4 h-4 sm:w-5 sm:h-5" />
       )}
