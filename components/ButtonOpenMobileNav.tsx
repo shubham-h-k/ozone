@@ -15,6 +15,7 @@ export default function ButtonOpenMobileNav() {
         onClick={() => setShowMobileNav(true)}
         className="justify-self-end md:hidden"
       >
+        <span className="sr-only">Open navigation menu</span>
         <IoMenu className="h-10 w-10 text-primary" />
       </button>
 
