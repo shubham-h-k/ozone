@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFilter } from "react-icons/fa";
 
 interface Props {
   setShowFilters: React.Dispatch<React.SetStateAction<boolean>>;
@@ -9,9 +10,10 @@ function ButtonShowFilters({ setShowFilters }: Props) {
     <>
       <button
         onClick={() => setShowFilters(true)}
-        className="lg:hidden px-3 py-1 text-sm font-medium border border-[#d9d9d9] rounded-full"
+        className="lg:hidden flex items-center gap-2 px-3 py-1 text-sm font-medium border border-[#d9d9d9] rounded-full"
       >
-        Filters
+        <span>Filters</span>
+        <FaFilter className="w-3 h-3" />
       </button>
     </>
   );

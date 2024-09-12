@@ -5,6 +5,7 @@ import MainContainerShopPage from "@/components/shop/MainContainerShopPage";
 
 import type { productProps } from "@/types";
 import { getProducts } from "@/lib/data-service";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Shop",
@@ -17,6 +18,7 @@ export default async function Shop() {
     <>
       <Header />
       <MainContainerShopPage products={products} />
+      <Footer />
     </>
   );
 }

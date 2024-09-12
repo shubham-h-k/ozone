@@ -4,7 +4,7 @@ import { IoMail } from "react-icons/io5";
 export default function ContactFormSection() {
   return (
     <section className="margin-top-md bg-[#060127]">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[40fr_60fr] gap-6 md:gap-10 lg:gap-20 xl:gap-40 max-width mx-auto padding-x py-10 md:py-20 text-white">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[40fr_60fr] gap-6 md:gap-10 lg:gap-20 xl:gap-40 max-width mx-auto padding-x py-10 md:py-20  border-b border-[#fafafa] text-white">
         <div>
           <h2 className="text-2xl xl:text-[2rem] font-bold">
             Let our specialists help you!

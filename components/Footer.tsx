@@ -14,7 +14,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-[#060127]">
-      <div className="grid grid-cols-1 md:grid-cols-[40fr_60fr] md:gap-x-12 gap-y-12 md:gap-y-9 max-width mx-auto padding-x py-8 md:py-12 xl:py-14 text-white border-t border-[#fafafa]">
+      <div className="grid grid-cols-1 md:grid-cols-[40fr_60fr] md:gap-x-12 gap-y-12 md:gap-y-9 max-width mx-auto padding-x py-8 md:py-12 xl:py-14 text-white">
         <div>
           <Image src={logoFooter} alt="Website Logo" className="w-12" />
           <p className="max-w-[27rem] md:max-w-64 xl:max-w-80 mt-4 xl:mt-6 font-medium">

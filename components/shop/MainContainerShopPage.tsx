@@ -7,7 +7,6 @@ import clsx from "clsx";
 import DualRangeSlider from "@/components/DualRangeSlider";
 import ColorSelector from "@/components/ColorSelector";
 import HorizontalRule from "@/components/HorizontalRule";
-import SortMobile from "@/components/shop/SortMobile";
 import FilterCheckbox from "@/components/shop/FilterCheckbox";
 import Sort from "@/components/shop/Sort";
 import Product from "@/components/shop/Product";
@@ -22,15 +21,14 @@ function MainContainerShopPage({ products }: { products: productProps[] }) {
   const [showFilters, setShowFilters] = useState(false);
 
   return (
-    <div className="max-width mx-auto mt-4 padding-x mb-[300px]">
+    <div className="max-width mx-auto mt-4 padding-x mb-12">
       <HorizontalRule />
       <main className="lg:grid lg:grid-cols-[16rem_auto] lg:gap-x-6">
         <Overlay isVisible={showFilters}>
           <aside
-            // lg:block lg:mt-[1.125rem]
             className={clsx(
-              "fixed left-0 transition-all duration-300 z-50 h-screen w-screen bg-[#fafafa] shadow-md overflow-scroll rounded-lg",
-              { "top-0": showFilters, "top-full": !showFilters }
+              "lg:mt-[1.125rem] max-lg:fixed max-lg:left-0 max-lg:transition-all max-lg:duration-300 max-lg:z-50 max-lg:h-screen max-lg:w-screen max-lg:bg-[#fafafa] max-lg:shadow-md max-lg:overflow-scroll",
+              { "max-lg:top-0": showFilters, "max-lg:top-full": !showFilters }
             )}
           >
             <button
@@ -79,7 +77,7 @@ function MainContainerShopPage({ products }: { products: productProps[] }) {
         </Overlay>
 
         <div>
-          <div className="flex items-center justify-between py-2">
+          <div className="max-lg:flex max-lg:items-center max-lg:justify-between py-2">
             <ButtonShowFilters setShowFilters={setShowFilters} />
             {/* <p className="text-sm font-semibold text-[#909090]">
         Showing 12 results of 24

@@ -15,7 +15,7 @@ export default function HeroSection() {
           href="/shop"
           className="inline-block sm:hover:-translate-y-1 duration-300 px-6 xl:px-8 py-3 xl:py-4 text-center sm:text-sm md:text-base font-semibold text-white bg-[#444] rounded-full"
         >
-          Explore all Products
+          Shop
         </Link>
       </div>
 
