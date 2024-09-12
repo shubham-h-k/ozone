@@ -41,7 +41,7 @@ export default function ColorSelector() {
   // );
 
   return (
-    <div className="p-6 border border-[#d9d9d9] rounded">
+    <div className="p-6 border-b blg:border border-[#d9d9d9] lg:rounded">
       <fieldset>
         <legend className="mb-4 font-semibold">Colors:</legend>
 

@@ -54,7 +54,7 @@ export default function FilterCheckbox({ field, label, data }: Props) {
   );
 
   return (
-    <form className="p-6 border border-[#d9d9d9] rounded">
+    <form className="p-6 border-b lg:border border-[#d9d9d9] lg:rounded">
       <fieldset>
         <legend className="font-semibold">{label}</legend>
         <div className="flex flex-col gap-3 mt-4">

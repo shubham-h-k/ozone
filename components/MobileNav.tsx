@@ -21,9 +21,12 @@ export default function MobileNav({ isOpen, setShowMobileNav }: Props) {
         { "right-0": isOpen }
       )}
     >
-      <button onClick={() => setShowMobileNav(false)}>
+      <button
+        onClick={() => setShowMobileNav(false)}
+        className="absolute top-8 right-10 "
+      >
         <span className="sr-only">Close navigation menu</span>
-        <IoClose className="absolute top-8 right-10 w-8 h-8" />
+        <IoClose className="w-8 h-8" />
       </button>
       <ul className="flex flex-col gap-8 pt-12 pl-12 text-xl font-bold [&_a:hover]:text-primary">
         <li>
