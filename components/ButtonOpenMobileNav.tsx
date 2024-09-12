@@ -4,7 +4,7 @@ import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 
 import MobileNav from "@/components/MobileNav";
-import Overlay from "./Overlay";
+import Overlay from "@/components/Overlay";
 
 export default function ButtonOpenMobileNav() {
   const [showMobileNav, setShowMobileNav] = useState(false);

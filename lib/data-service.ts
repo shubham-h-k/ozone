@@ -7,7 +7,7 @@ export async function getProducts() {
   const { data: products, error } = await supabase.from("products").select("*");
 
   if (error) {
-    console.error(error);
+    throw new Error(error.message);
   }
 
   // console.log(products);

@@ -5,25 +5,13 @@ import { FaMinus, FaPlus } from "react-icons/fa6";
 import { archivo } from "@/styles/fonts";
 import ButtonSaveProduct from "@/components/shop/ButtonSaveProduct";
 import ButtonAddToCart from "@/components/ButtonAddToCart";
-
-import { formatCurrency } from "@/lib/utils";
-import { truncateTitle } from "@/lib/utils";
 import ButtonUpdateCount from "../ButtonUpdateCount";
 
-interface Props {
-  product: {
-    id: number;
-    created_at: string;
-    updated_at: string | null;
-    title: string;
-    price: number;
-    discount: number;
-    image: string;
-    thumbnail: string;
-  };
-}
+import { productProps } from "@/types";
+import { formatCurrency } from "@/lib/utils";
+import { truncateTitle } from "@/lib/utils";
 
-export default async function Product({ product }: Props) {
+export default function Product({ product }: { product: productProps }) {
   // const [itemCount, setItemCount] = useState(1);
   const itemCount = 0;
 

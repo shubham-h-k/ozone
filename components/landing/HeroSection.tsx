@@ -23,7 +23,7 @@ export default function HeroSection() {
         src={hero}
         alt=""
         className="w-full rounded-[2rem]"
-        placeholder="blur"
+        priority={true}
       />
     </section>
   );
