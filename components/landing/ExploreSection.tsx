@@ -14,7 +14,7 @@ function ExploreSection() {
           src={card1}
           alt=""
           fill
-          placeholder="blur"
+          priority={true}
           sizes="(max-width: 576px) 100vw, 50vw"
           className="object-cover"
         />
@@ -31,7 +31,7 @@ function ExploreSection() {
           src={card2}
           alt=""
           fill
-          placeholder="blur"
+          priority={true}
           sizes="(max-width: 576px) 100vw, 50vw"
           className="object-cover"
         />
@@ -48,7 +48,7 @@ function ExploreSection() {
           src={card3}
           alt=""
           fill
-          placeholder="blur"
+          priority={true}
           sizes="(max-width: 576px) 100vw, 50vw"
           className="object-cover"
         />
