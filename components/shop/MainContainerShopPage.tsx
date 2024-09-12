@@ -29,8 +29,8 @@ function MainContainerShopPage({ products }: { products: productProps[] }) {
           <aside
             // lg:block lg:mt-[1.125rem]
             className={clsx(
-              "fixed -bottom-full left-0 transition-all duration-300 z-50 h-screen w-screen bg-[#fafafa] shadow-md overflow-scroll rounded-lg",
-              { "bottom-0": showFilters }
+              "fixed left-0 transition-all duration-300 z-50 h-screen w-screen bg-[#fafafa] shadow-md overflow-scroll rounded-lg",
+              { "top-0": showFilters, "top-full": !showFilters }
             )}
           >
             <button
