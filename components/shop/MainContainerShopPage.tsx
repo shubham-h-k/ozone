@@ -3,21 +3,21 @@
 import React, { useState } from "react";
 import { Suspense } from "react";
 import clsx from "clsx";
+import { IoClose } from "react-icons/io5";
 
 import DualRangeSlider from "@/components/DualRangeSlider";
 import ColorSelector from "@/components/ColorSelector";
 import HorizontalRule from "@/components/HorizontalRule";
 import FilterCheckbox from "@/components/shop/FilterCheckbox";
 import Sort from "@/components/shop/Sort";
-import Product from "@/components/shop/Product";
+import ProductItem from "@/components/shop/ProductItem";
 import ButtonShowFilters from "@/components/shop/ButtonShowFilters";
+import Overlay from "@/components/Overlay";
 
 import type { productProps } from "@/types";
 import { productBrands, productCategories } from "@/constants";
-import Overlay from "../Overlay";
-import { IoClose } from "react-icons/io5";
 
-function MainContainerShopPage({ products }: { products: productProps[] }) {
+function MainContainerShopPage({ products, user }) {
   const [showFilters, setShowFilters] = useState(false);
 
   return (
@@ -88,11 +88,15 @@ function MainContainerShopPage({ products }: { products: productProps[] }) {
             </Suspense>
           </div>
           <HorizontalRule />
-          <ul className="mt-6 sm:mt-10 space-y-6 sm:space-y-10">
-            {products?.map((product: productProps) => (
-              <Product product={product} key={product.id} />
-            ))}
-          </ul>
+          {products.length > 0 ? (
+            <ul className="mt-6 sm:mt-10 space-y-6 sm:space-y-10">
+              {products.map((product: productProps) => (
+                <ProductItem product={product} key={product.asin} user={user} />
+              ))}
+            </ul>
+          ) : (
+            <p>No items to show!</p>
+          )}
         </div>
       </main>
     </div>

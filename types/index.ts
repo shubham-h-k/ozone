@@ -1,12 +1,22 @@
 interface productProps {
   id: number;
   created_at: string;
-  updated_at: string | null;
-  title: string;
-  price: number;
-  discount: number;
-  image: string;
-  thumbnail: string;
+  asin: string;
+  product_title: string;
+  product_price: number;
+  product_original_price: number;
+  product_star_rating: number;
+  product_num_ratings: number;
+  product_photo: string;
+  sales_volume: string;
+  has_variations: boolean;
 }
 
-export type { productProps };
+interface PropsProductVariation {
+  asin: string;
+  value: string;
+  is_available: boolean;
+  photo: string;
+}
+
+export type { productProps, PropsProductVariation };

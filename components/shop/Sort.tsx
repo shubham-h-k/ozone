@@ -10,7 +10,7 @@ export default function Sort() {
 
   return (
     <form className="relative flex items-center justify-end gap-2 lg:gap-3">
-      <IoChevronDown className="absolute right-2 top-1/2 -translate-y-1/2" />
+      <IoChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none" />
       <label
         htmlFor="product-sort"
         className="text-sm lg:text-base font-medium lg:font-semibold"

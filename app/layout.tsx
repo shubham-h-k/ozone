@@ -4,9 +4,9 @@ import { manrope } from "@/styles/fonts";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: { template: "%s - A5IT", default: "Home - A5IT" },
+  title: { template: "%s", default: "Home" },
   description:
-    "With full-stack expertise, A5IT helps you design, orchestrate and manage technologies that drive business success.",
+    "Find, explore and buy products from different categories in this store.",
 };
 
 export default function RootLayout({
@@ -16,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${manrope.className} text-black font-normal bg-[#FAFAFA]`}
-      >
+      <body className={`${manrope.className} text-black font-normal`}>
         {children}
       </body>
     </html>

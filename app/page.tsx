@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 
 export default function Page() {
   return (
-    <>
+    <div className="bg-[#FAFAFA]">
       <Header />
 
       <main>
@@ -30,6 +30,6 @@ export default function Page() {
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
