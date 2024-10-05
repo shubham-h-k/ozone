@@ -1,10 +1,21 @@
 import styles from "@/styles/spinner.module.css";
 
-function Spinner() {
+interface PropsSpinner {
+  width?: number;
+  height?: number;
+  borderWidth?: number;
+}
+
+function Spinner({ width, height, borderWidth }: PropsSpinner) {
   return (
-    <div className="flex justify-center mt-8">
-      <span className={`${styles.spinner}`}></span>
-    </div>
+    <div
+      style={{
+        width: `${width}px`,
+        height: `${height}px`,
+        borderWidth: `${borderWidth}px`,
+      }}
+      className={`${styles.spinner}`}
+    ></div>
   );
 }
 

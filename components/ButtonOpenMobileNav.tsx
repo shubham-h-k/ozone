@@ -19,9 +19,9 @@ export default function ButtonOpenMobileNav() {
         <IoMenu className="h-10 w-10 text-primary" />
       </button>
 
-      <Overlay isVisible={showMobileNav}>
-        <MobileNav isOpen={showMobileNav} setShowMobileNav={setShowMobileNav} />
-      </Overlay>
+      {showMobileNav && <Overlay />}
+
+      <MobileNav isOpen={showMobileNav} setShowMobileNav={setShowMobileNav} />
     </>
   );
 }

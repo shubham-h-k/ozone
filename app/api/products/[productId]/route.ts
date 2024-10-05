@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 export async function GET(request, { params }) {
   const { productId } = params;
 

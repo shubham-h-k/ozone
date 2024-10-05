@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import hero from "@/public/images/hero.png";
-import Link from "next/link";
+import NavigateTo from "@/components/NavigateTo";
 
 export default function HeroSection() {
   return (
@@ -11,12 +11,11 @@ export default function HeroSection() {
           Fulfilling all your Hardware, Software and Service Needs at your
           finger tips
         </h1>
-        <Link
+        <NavigateTo
           href="/shop"
+          label="Shop"
           className="inline-block sm:hover:-translate-y-1 duration-300 px-6 xl:px-8 py-3 xl:py-4 text-center sm:text-sm md:text-base font-semibold text-white bg-[#444] rounded-full"
-        >
-          Shop
-        </Link>
+        />
       </div>
 
       <Image

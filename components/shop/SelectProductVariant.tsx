@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
@@ -61,6 +63,7 @@ function SelectProductVariant({
                     "ring-1 ring-borderColor":
                       variant.value !== curProductVariant,
                     "cursor-not-allowed": !variant.is_available,
+                    hidden: !variant.is_available,
                   })
                 : clsx("px-[10px] py-[6px] text-sm rounded", {
                     "ring-2 ring-primary font-bold":
@@ -74,13 +77,17 @@ function SelectProductVariant({
             key={variant.asin}
           >
             {label === "Color" ? (
-              <Image
-                src={variant.photo}
-                alt={variant.value}
-                fill
-                sizes="10vw"
-                className="object-contain object-center pointer-events-none"
-              />
+              <>
+                {variant.is_available ? (
+                  <Image
+                    src={variant.photo}
+                    alt={variant.value}
+                    fill
+                    sizes="10vw"
+                    className="object-contain object-center pointer-events-none"
+                  />
+                ) : null}
+              </>
             ) : (
               variant.value
             )}

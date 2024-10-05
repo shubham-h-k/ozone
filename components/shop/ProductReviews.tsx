@@ -42,7 +42,13 @@ async function ProductReviews({ productDetails }) {
         <p className="mt-2 text-sm">{customers_say}</p>
         <HorizontalRule className="hidden md:block mt-4" />
         <h2 className="mt-4 text-lg font-bold">Top {totalReviews} reviews</h2>
-        <Suspense fallback={<Spinner />}>
+        <Suspense
+          fallback={
+            <div className="flex justify-center mt-8">
+              <Spinner />
+            </div>
+          }
+        >
           <ProductReviewsList reviews={reviews} />
         </Suspense>
       </div>

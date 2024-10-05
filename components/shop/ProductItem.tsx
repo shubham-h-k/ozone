@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaMinus, FaPlus } from "react-icons/fa6";
@@ -23,8 +25,6 @@ export default function ProductItem({ product, user }) {
     product_photo,
   } = product;
 
-  console.log(product);
-
   const productDiscount = Math.round(
     ((product_original_price - product_price) * 100) / product_original_price
   );
@@ -47,17 +47,17 @@ export default function ProductItem({ product, user }) {
       </div>
 
       <div className="flex flex-col flex-1 px-4 sm:px-6 py-2  sm:py-2 ">
-        <Link href={`/shop/${asin}`}>
-          <p className="sm:hidden text-sm xl:text-lg font-semibold cursor-pointer">
+        <Link href={`/shop/${asin}`} className="hover:text-primary">
+          <span className="sm:hidden text-sm xl:text-lg ">
             {truncateTitle(product_title, 60)}
-          </p>
+          </span>
+          <span className="hidden sm:block md:hidden xl:text-lg font-semibold">
+            {truncateTitle(product_title, 120)}
+          </span>
+          <span className="hidden md:block text-lg font-semibold">
+            {truncateTitle(product_title, 190)}
+          </span>
         </Link>
-        <p className="hidden sm:block md:hidden xl:text-lg font-semibold cursor-pointer">
-          {truncateTitle(product_title, 120)}
-        </p>
-        <p className="hidden md:block text-lg font-semibold cursor-pointer">
-          {truncateTitle(product_title, 190)}
-        </p>
         <p className="mt-1 sm:mt-2 mb-4">
           <span className="text-xl sm:text-2xl font-bold text-primary">
             {formatCurrency(Math.round(product_price))}

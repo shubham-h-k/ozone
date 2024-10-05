@@ -3,7 +3,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { IoClose } from "react-icons/io5";
 
-import useDetectOutsideClick from "../hooks/useDetectOutsideClick";
+import useDetectOutsideClick from "@/hooks/useDetectOutsideClick";
 
 interface Props {
   isOpen: boolean;
@@ -17,13 +17,13 @@ export default function MobileNav({ isOpen, setShowMobileNav }: Props) {
     <nav
       ref={navEl}
       className={clsx(
-        "fixed top-0 -right-80 transition-all duration-300 z-50 h-screen w-80 bg-[#fafafa] rounded-lg shadow-md",
+        "fixed top-0 -right-80 transition-all duration-300 z-[11] h-screen w-80 bg-[#fafafa] rounded-lg shadow-md",
         { "right-0": isOpen }
       )}
     >
       <button
         onClick={() => setShowMobileNav(false)}
-        className="absolute top-8 right-10 "
+        className="absolute top-8 right-10"
       >
         <span className="sr-only">Close navigation menu</span>
         <IoClose className="w-8 h-8" />
