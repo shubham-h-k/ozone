@@ -7,7 +7,7 @@ import card3 from "@/public/images/card3.png";
 
 function ExploreSection() {
   return (
-    <section className="grid grid-cols-[21rem] xs:grid-cols-[27rem] sm:grid-cols-2 items-center justify-center sm:gap-x-3 md:gap-x-4 xl:gap-x-5 gap-y-4 md:gap-y-5 xl:gap-y-6 max-width mx-auto mt-12 padding-x">
+    <section className="grid grid-cols-[21rem] xs:grid-cols-[27rem] sm:grid-cols-2 items-center justify-center sm:gap-x-3 md:gap-x-4 xl:gap-x-5 gap-y-4 md:gap-y-5 xl:gap-y-6 mt-12">
       <div className="sm:row-span-2 relative aspect-square rounded-2xl overflow-hidden">
         <div className="img-gradient"></div>
         <Image

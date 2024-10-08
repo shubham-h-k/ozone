@@ -7,11 +7,11 @@ import infoSection2 from "@/public/images/info-section-2.png";
 
 export default function InfoSection() {
   return (
-    <section className="max-width mx-auto margin-top-md padding-x">
-      <Heading as="h2">Unlock Your Business Potential with A5 IT</Heading>
+    <section className="margin-top-md">
+      <Heading as="h2">Unlock Your Business Potential with Ozone</Heading>
       <p className="max-w-[50rem] mx-auto mt-2 md:mt-4 mb-8 md:mb-16 text-sm md:text-base md:font-semibold text-[#4D4D4D] text-center">
         In today&apos;s dynamic market, finding a reliable IT partner is key to
-        overcoming challenges and maximizing your business potential. At A5 IT,
+        overcoming challenges and maximizing your business potential. At Ozone,
         we are your go-to full-service technology solutions provider, offering
         deep industry expertise across various technology domains.
       </p>
@@ -51,7 +51,7 @@ export default function InfoSection() {
               <IoCheckmarkCircle className="md:w-5 md:h-5 fill-primary " />
               <h4 className="font-semibold">Digital Transformation:</h4>
               <p className="col-start-2 text-sm">
-                A5 IT specializes in elevating your business to a digital
+                Ozone specializes in elevating your business to a digital
                 enterprise, exceeding traditional IT boundaries.
               </p>
             </li>
@@ -69,7 +69,7 @@ export default function InfoSection() {
 
         <div className="md:justify-self-center md:max-w-[30rem]">
           <h3 className="mb-4 xl:mb-10 text-xl lg:text-2xl xl:text-[2rem] font-bold text-primary">
-            Why choose A5IT?
+            Why choose Ozone?
           </h3>
           <div className="flex flex-col gap-4 xl:gap-6">
             <div className="grid grid-cols-[auto_1fr] items-center gap-x-3 gap-y-1">

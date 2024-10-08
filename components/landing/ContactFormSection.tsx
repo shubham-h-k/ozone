@@ -64,7 +64,10 @@ export default function ContactFormSection() {
               className="p-3 bg-transparent border border-[#e4e4e7] rounded"
             />
           </div>
-          <button className="md:col-span-2 hover:-translate-y-1 duration-300 p-4 font-bold bg-primary rounded-full">
+          <button
+            disabled={true}
+            className="md:col-span-2 hover:-translate-y-1 duration-300 p-4 font-bold bg-primary rounded-full"
+          >
             Submit
           </button>
         </form>

@@ -31,7 +31,6 @@ export default function ProductItem({ product, user }) {
 
   return (
     <li className="relative flex border border-[#e4e4e7] rounded-md overflow-hidden">
-      <ButtonSaveProduct className="absolute z-10 top-2 right-2 bg-[#FAFAFA]" />
       <div className="flex items-start justify-center p-2 bg-[#f4f4f4]">
         <Link
           href={`/shop/${asin}`}
@@ -46,7 +45,7 @@ export default function ProductItem({ product, user }) {
         </Link>
       </div>
 
-      <div className="flex flex-col flex-1 px-4 sm:px-6 py-2  sm:py-2 ">
+      <div className="flex flex-col flex-1 pl-4 pr-2 sm:pl-6 sm:pr-4 py-2 sm:py-2 ">
         <Link href={`/shop/${asin}`} className="hover:text-primary">
           <span className="sm:hidden text-sm xl:text-lg ">
             {truncateTitle(product_title, 60)}
@@ -58,7 +57,7 @@ export default function ProductItem({ product, user }) {
             {truncateTitle(product_title, 190)}
           </span>
         </Link>
-        <p className="mt-1 sm:mt-2 mb-4">
+        <p className="mt-1 sm:mt-2 mb-6">
           <span className="text-xl sm:text-2xl font-bold text-primary">
             {formatCurrency(Math.round(product_price))}
           </span>
@@ -88,7 +87,10 @@ export default function ProductItem({ product, user }) {
               <FaPlus className="w-3 h-3 fill-[#4D4D4D]" />
             </ButtonUpdateCount>
           </div>
-          <ButtonAddToCart productId={asin} user={user} />
+          <div className="flex items-center gap-3 sm:gap-4">
+            <ButtonAddToCart productId={asin} user={user} />
+            <ButtonSaveProduct />
+          </div>
         </div>
       </div>
     </li>

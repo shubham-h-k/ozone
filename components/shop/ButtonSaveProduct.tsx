@@ -18,9 +18,9 @@ export default function ButtonSaveProduct({ className }: Props) {
     >
       <span className="sr-only">Save product</span>
       {isSaved ? (
-        <FaHeart className="w-4 h-4 sm:w-5 sm:h-5 fill-[#EE0000]" />
+        <FaHeart className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 fill-[#EE0000]" />
       ) : (
-        <FaRegHeart className="w-4 h-4 sm:w-5 sm:h-5" />
+        <FaRegHeart className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
       )}
     </button>
   );

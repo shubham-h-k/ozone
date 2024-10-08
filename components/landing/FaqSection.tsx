@@ -35,7 +35,7 @@ const faqs = [
     question:
       "Can I find specialized industry-specific software services in Chicago?",
     answer:
-      "Absolutely, A5 IT's software services Chicago offers solutions for various industries, such as finance, healthcare, manufacturing, and more, ensuring tailored software solutions for your specific business needs.",
+      "Absolutely, Ozone's software services Chicago offers solutions for various industries, such as finance, healthcare, manufacturing, and more, ensuring tailored software solutions for your specific business needs.",
   },
   {
     id: "04",

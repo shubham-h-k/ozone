@@ -7,7 +7,7 @@ import Heading from "@/components/Heading";
 
 function ProcessSection() {
   return (
-    <section className="max-width mx-auto margin-top-md padding-x">
+    <section className="margin-top-md">
       <Heading as="h2">
         Seamless Experience Package: Shipping, Support, Returns, and Rewards
       </Heading>

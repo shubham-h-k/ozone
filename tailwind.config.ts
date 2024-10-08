@@ -50,6 +50,7 @@ const config: Config = {
 };
 export default config;
 
+// #0191da ozone-logo color
 // #3D3BDD, Primary
 // #7676FF PROCESS,
 // #a5a6f61a Faq,

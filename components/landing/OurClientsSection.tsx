@@ -12,7 +12,7 @@ import playstationLogo from "@/public/images/playstation-logo.png";
 
 export default function OurClientsSection() {
   return (
-    <section className="max-width mx-auto margin-top-md padding-x">
+    <section className="margin-top-md">
       <Heading as="h2">Our Trusted Clients</Heading>
       <div className="grid grid-cols-2 md:grid-cols-6 xl:grid-cols-8  gap-2 xs:gap-3 md:gap-4 mt-4 md:mt-10">
         <div className="flex items-center justify-center md:col-span-2 h-36 bg-white rounded-lg shadow-3xl">

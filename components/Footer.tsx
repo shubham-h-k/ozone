@@ -3,7 +3,7 @@ import { FaFacebook } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 
-import logoFooter from "@/public/images/logo-footer.png";
+import logo from "@/public/images/ozone-logo-white.svg";
 import maestro from "@/public/images/maestro-logo.png";
 import paypal from "@/public/images/paypal-logo-footer.png";
 import visa from "@/public/images/visa-logo.png";
@@ -16,9 +16,9 @@ export default function Footer() {
     <footer className="bg-[#060127]">
       <div className="grid grid-cols-1 md:grid-cols-[40fr_60fr] md:gap-x-12 gap-y-12 md:gap-y-9 max-width mx-auto padding-x py-8 md:py-12 xl:py-14 text-white">
         <div>
-          <Image src={logoFooter} alt="Website Logo" className="w-12" />
+          <Image src={logo} alt="Website Logo" className="h-8 w-auto" />
           <p className="max-w-[27rem] md:max-w-64 xl:max-w-80 mt-4 xl:mt-6 font-medium">
-            With full-stack expertise, A5 IT helps you design, orchestrate and
+            With full-stack expertise, Ozone helps you design, orchestrate and
             manage technologies that drive business success.
           </p>
           <section className="mt-6 xl:mt-4 ">
@@ -129,7 +129,7 @@ export default function Footer() {
         <div className="md:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-8 pt-4 border-t border-[#a1a1a1]">
           <ul className="flex self-center gap-6">
             <li>
-              <Link href="/">
+              <Link href="/" scroll={false}>
                 <span className="sr-only">Facebook page</span>
                 <FaFacebook className="w-6 h-6" />
               </Link>
@@ -137,6 +137,7 @@ export default function Footer() {
             <li>
               <Link
                 href="/"
+                scroll={false}
                 className="flex items-center justify-center w-6 h-6 bg-white rounded-full"
               >
                 <span className="sr-only">Twitter page</span>
@@ -144,19 +145,17 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/" scroll={false}>
                 <span className="sr-only">Youtube page</span>
                 <FaYoutube className="w-6 h-6" />
               </Link>
             </li>
           </ul>
-          <p className="xs:hidden text-xs font-semibold">
-            2023 A5 IT All Rights Reserved <br />
-            8231 Bay Colony Dr, #1401, Naples, Florida, 34108 United States
-          </p>
-          <p className="hidden xs:block text-xs font-semibold">
-            2023 A5 IT All Rights Reserved - 8231 Bay Colony Dr, #1401, Naples,
-            Florida, 34108 United States
+          {/* <p className="xs:hidden text-xs font-semibold">
+            2024 Ozone All Rights Reserved
+          </p> */}
+          <p className="text-xs font-semibold text-center">
+            2024 Ozone All Rights Reserved
           </p>
         </div>
       </div>

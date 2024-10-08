@@ -17,13 +17,15 @@ export default function Page() {
       <Header />
 
       <main>
-        <HeroSection />
-        <ExploreSection />
-        <CategoriesSection />
-        <InfoSection />
-        <WhyWorkWithUsSection />
-        <OurClientsSection />
-        <ProcessSection />
+        <div className="max-width mx-auto padding-x">
+          <HeroSection />
+          <ExploreSection />
+          <CategoriesSection />
+          <InfoSection />
+          <WhyWorkWithUsSection />
+          <OurClientsSection />
+          <ProcessSection />
+        </div>
         <ConsultationSection />
         <FaqSection />
         <ContactFormSection />

@@ -8,7 +8,7 @@ import NextTopLoader from "nextjs-toploader";
 export const metadata: Metadata = {
   title: { template: "%s", default: "Home" },
   description:
-    "Find, explore and buy products from different categories in this store.",
+    "Find, explore and buy products online from different categories in this store.",
 };
 
 export default function RootLayout({

@@ -94,7 +94,9 @@ function MainContainerShopPage({ products, user }) {
               ))}
             </ul>
           ) : (
-            <p>No items to show!</p>
+            <p className="mt-20 mb-40 text-3xl font-semibold text-center">
+              No items to show!
+            </p>
           )}
         </div>
       </main>
