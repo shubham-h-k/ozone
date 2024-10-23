@@ -1,3 +1,14 @@
+## Upcoming features
+
+- Authentication (username-password and Google Auth)
+- Reset Password
+- Authorization (protected routes)
+- User Cart
+- User account (wishlist and update profile info)
+- Place order
+- Payment integration
+- Order tracking
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
